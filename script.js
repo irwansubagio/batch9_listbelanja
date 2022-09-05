@@ -25,37 +25,33 @@ floating_button.addEventListener('click', () => {
 });
 
 // menambahkan event listener ke modal bg
-if (modal_bg) {
-  modal_bg.addEventListener('click', () => {
-    hideModal();
-  });
-}
+modal_bg.addEventListener('click', () => {
+  hideModal();
+});
 
 // tambahkan event listener submit di addlist_form
-if (addlist_form) {
-  addlist_form.addEventListener('submit', (event) => {
-    // stop form dari reload page
-    event.preventDefault();
+addlist_form.addEventListener('submit', (event) => {
+  // stop form dari reload page
+  event.preventDefault();
 
-    // tangkap value dari masing-masing input form
-    let barang = event.target.barang.value;
-    let harga = event.target.harga.value;
+  // tangkap value dari masing-masing input form
+  let barang = event.target.barang.value;
+  let harga = event.target.harga.value;
 
-    // push data ke data list belanja
-    data_list_belanja.push({
-      nama_barang: barang,
-      harga_barang: harga,
-      tanggal: new Date().toLocaleDateString(),
-    });
-
-    //clear input field
-    event.target.barang.value = '';
-    event.target.harga.value = '';
-
-    hideModal();
-    renderToHtml();
+  // push data ke data list belanja
+  data_list_belanja.push({
+    nama_barang: barang,
+    harga_barang: harga,
+    tanggal: new Date().toLocaleDateString(),
   });
-}
+
+  //clear input field
+  event.target.barang.value = '';
+  event.target.harga.value = '';
+
+  hideModal();
+  renderToHtml();
+});
 
 // show modal
 function showModal() {
