@@ -14,17 +14,15 @@ if (subtittle) {
 let data_list_belanja = [];
 
 // tambahakan event listerer submit ke element absensi_form
-if (floating_button) {
-  floating_button.addEventListener('click', () => {
-    // munculkan
-    if (modal.style.display == 'none') {
-      showModal();
-      return;
-    }
-    // sembunyikan kembali
-    hideModal();
-  });
-}
+floating_button.addEventListener('click', () => {
+  // munculkan
+  if (modal.style.display == 'none') {
+    showModal();
+    return;
+  }
+  // sembunyikan kembali
+  hideModal();
+});
 
 // menambahkan event listener ke modal bg
 if (modal_bg) {
