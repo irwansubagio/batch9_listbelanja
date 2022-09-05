@@ -23,7 +23,7 @@ h3 {
 
 .container {
   width: inherit;
-  min-height: 10vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 20px;
